@@ -1,0 +1,84 @@
+===========================================================================
+Title                    Fortress of the Infernal Sanctum
+Filename                 fotis.pk3
+Advanced engine needed   GZDoom (Vulkan/GL renderer)
+Primary purpose          Single Player
+Author                   GOATPRST (Nate Roe)
+
+Description              A single large map featuring defensive fortress
+                         architecture, ~1052 enemies, an adaptive music
+                         system with 18 segments, and a cinematic title
+                         screen with a scale maquette diorama.
+
+Additional Credits to    Ukiro for OTEX. I mean, like, wow.
+                         Deep Star Maps for skybox imagery.
+
+Special Thanks to        GZDoom and UDB devs, and documentation and wiki
+                         contributors: Thanks for the engine, the tools,
+                         and all the info!
+
+===========================================================================
+
+* Information *
+
+Game                     DOOM2
+Map #                    Map01
+Single Player            Yes
+Cooperative 2-4 Player   No
+Deathmatch 2-4 Player    No
+Difficulty Settings      Yes
+New Sounds               No
+New Graphics             Yes
+New Music                Yes (18 adaptive segments)
+Dehacked/BEX Patch       No (ZScript though)
+Demos Replaced           None
+Freelook                 Optional; Recommended, not required
+Jump                     Disabled
+Crouch                   Disabled
+
+* Construction *
+
+Base                     New level from scratch
+Build Time               Several months
+Editor(s) used           UDB
+Known Bugs               No known issues
+May Not Run With         No known issues with mods. Requires GZDoom.
+
+
+
+* Copyright / Permissions *
+
+Fortress of the Infernal Sanctum © 2025 by Nathaniel Roe (GOATPRST) is licensed under
+CC BY-NC-SA 4.0. To view a copy of this license, visit
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+OTEX © 2020 Ola Björling (ukiro)
+To view a copy of this license, visit
+https://doom.ukiro.com/otex-downloads/
+OTEX textures located in textures/OTEX1.1
+derived textures located in textures/hackOTEX/
+
+Skybox imagery from Deep Star Maps: https://svs.gsfc.nasa.gov/4851/
+
+All other images, text files, and music are the original work of Nate Roe.
+
+Authors MAY use this level as a base to build additional
+levels. Please borrow my scripts, ideas, and resources.
+Please make new Doom2 maps. Fork me on GitHub!
+
+You MAY distribute this WAD, provided you include this file, with
+or without modifications. You may distribute this file in any electronic
+format (BBS, Telegraph, Data Cassette, Diskette, CD, Facsimile, etc) as
+long as you include this file intact. You can also print it on paper,
+engrave it in marble, carve into wooden strips, inscribe on papyrus, or
+imprint into clay tablets. Probably you'll use the Internet though. That's
+cool, too.
+
+
+
+* Where to get this WAD *
+
+Websites
+
+https://github.com/nateroe/fotis
+===========================================================================
