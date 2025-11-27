@@ -1,0 +1,9 @@
+
+graphic M_DOOM, 1000, 240 
+{
+	Offset 280, 0
+	PATCH M_DOOM, 0, 0
+	XScale 3.4
+	YScale 4
+}
+

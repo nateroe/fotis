@@ -1,0 +1,15 @@
+// image source: Deep Star Maps 2020 (plus some photoshop magic)
+// https://svs.gsfc.nasa.gov/4851/
+
+// to cubemap:
+// https://jaxry.github.io/panorama-to-cubemap/
+
+skybox "mysky"
+{
+nz
+nx
+pz
+px
+py
+ny
+}

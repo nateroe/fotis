@@ -1,0 +1,67 @@
+name: Create Release with Multiple PK3 Files
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on tags like v1.0, v2.1, etc.
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      # Full release
+      - name: Zip full release
+        run: |
+          zip -r grnmeany.pk3 . -x ".git/*" ".github/*" "README.md" "*.pk3" ".gitignore" "screenshots/*" "README.md"
+
+      # No music
+      - name: Zip no-music release
+        run: |
+          zip -r grnmeany-nomusic.pk3 . -x "music/*" ".git/*" ".github/*" "README.md" "*.pk3" ".gitignore" "screenshots/*" "README.md"
+
+      # Convert FLAC to OGG Vorbis
+      - name: Convert FLAC to OGG Vorbis
+        run: |
+          for file in music/*.flac; do
+            ogg_file="music/$(basename "$file" .flac).ogg"
+            ffmpeg -i "$file" -qscale:a 5 "$ogg_file"
+          done
+
+      # Ogg release
+      - name: Zip Ogg release
+        run: |
+          zip -r grnmeany-ogg.pk3 . -x "music/*.flac" ".git/*" ".github/*" "README.md" "*.pk3" ".gitignore" "screenshots/*" "README.md"
+
+      # Create release
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: "Release ${{ github.ref_name }}"
+          draft: false
+          prerelease: false
+
+      # Upload results
+      - name: Upload PK3 Files
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: "Release ${{ github.ref_name }}"
+          files: |
+            grnmeany.pk3
+            grnmeany-nomusic.pk3
+            grnmeany-ogg.pk3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

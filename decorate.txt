@@ -1,0 +1,10 @@
+// the default RadSuit lasts all day long; this one is shorter.
+ACTOR PowerShortIronFeet : PowerIronFeet replaces PowerIronFeet
+{
+	Powerup.Duration -30
+}
+
+ACTOR ShortRadSuit : RadSuit replaces RadSuit
+{
+  Powerup.Type "PowerShortIronFeet"
+}

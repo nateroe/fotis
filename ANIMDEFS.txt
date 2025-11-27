@@ -1,0 +1,5 @@
+Switch	Doom 3		OSWTCHD3	On Pic	OSWTCHD2	Tics 0
+Texture	Optional	OFALLB01	Range	OFALLB08	Tics 3
+Texture	Optional	OFALLL01	Range	OFALLL08	Tics 4
+Flat	Optional	0LAVAE01	Range	0LAVAE08	Tics 5
+Flat	Optional	0BLODA01	Range	0BLODA08	Tics 5

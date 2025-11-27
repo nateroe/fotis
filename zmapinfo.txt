@@ -1,0 +1,181 @@
+gameinfo {
+	TitlePage = "fortscrn"
+}
+
+defaultmap {
+	NoJump
+	NoCrouch
+	ResetHealth
+	ResetInventory
+	ResetItems
+	UsePlayerStartZ
+	sky1 =  "mysky" , 0.01
+	skyrotate = 0.1, -0.3, 0.1
+	ExitPic = LVLINTER
+	InterMusic = "seg0" 
+	CheckSwitchRange = 1
+	lightmode = 2
+	compat_explode1 = 1
+	compat_mbfmonstermove = 1
+	par = 0
+}
+
+// ----------------------------
+
+DoomEdNums
+{
+	14001 = RedTorchTiny
+}
+
+// ----------------------------
+
+// this is here to initialize the background and the music
+Intermission Inter_Cast
+{
+	Image
+	{
+		Background = "BONEHEL2"
+		Time = -1
+		Music = "seg1"
+	}
+	Link = Doom2Cast
+}
+
+// redefine the cast to limit to monsters that actually appear
+// ref https://github.com/ZDoom/gzdoom/blob/master/wadsrc/static/mapinfo/common.txt
+// "cast call" names ($CC_ZOMBIE etc) defined in https://github.com/ZDoom/gzdoom/blob/master/wadsrc/static/language.csv
+Intermission Doom2Cast
+{
+	Cast
+	{
+		CastClass = "Zombieman"
+		CastName = "$CC_ZOMBIE"
+		AttackSound = "Missile", 1, "grunt/attack"
+	}
+	Cast
+	{
+		CastClass = "ShotgunGuy"
+		CastName = "$CC_SHOTGUN"
+		AttackSound = "Missile", 1, "shotguy/attack"
+	}
+	Cast
+	{
+		CastClass = "DoomImp"
+		CastName = "$CC_IMP"
+		AttackSound = "Missile", 2, "imp/attack"
+	}
+	Cast
+	{
+		CastClass = "Demon"
+		CastName = "$CC_DEMON"
+		AttackSound = "Melee", 1, "demon/melee"
+	}
+	Cast
+	{
+		CastClass = "Spectre"
+		CastName = "$FN_SPECTRE"
+		AttackSound = "Melee", 1, "demon/melee"
+	}
+	Cast
+	{
+		CastClass = "LostSoul"
+		CastName = "$CC_LOST"
+		AttackSound = "Missile", 1, "skull/melee"
+	}
+	Cast
+	{
+		CastClass = "Cacodemon"
+		CastName = "$CC_CACO"
+		AttackSound = "Missile", 1, "caco/attack"
+	}
+	Cast
+	{
+		CastClass = "HellKnight"
+		CastName = "$CC_HELL"
+		AttackSound = "Missile", 1, "baron/attack"
+	}
+	Cast
+	{
+		CastClass = "BaronOfHell"
+		CastName = "$CC_BARON"
+		AttackSound = "Missile", 1, "baron/attack"
+	}	
+	Cast
+	{
+		CastClass = "Arachnotron"
+		CastName = "$CC_ARACH"
+		AttackSound = "Missile", 1, "baby/attack"
+	}
+	Cast
+	{
+		CastClass = "PainElemental"
+		CastName = "$CC_PAIN"
+		AttackSound = "Missile", 2, "skull/melee"
+	}
+	Cast
+	{
+		CastClass = "Revenant"
+		CastName = "$CC_REVEN"
+		AttackSound = "Missile", 1, "skeleton/attack"
+		AttackSound = "Melee", 1, "skeleton/swing"
+		AttackSound = "Melee", 3, "skeleton/melee"
+	}
+	Cast
+	{
+		CastClass = "Fatso"
+		CastName = "$CC_MANCU"
+		AttackSound = "Missile", 1, "fatso/attack"
+		AttackSound = "Missile", 4, "fatso/attack"
+		AttackSound = "Missile", 7, "fatso/attack"
+	}
+	Cast
+	{
+		CastClass = "Archvile"
+		CastName = "$CC_ARCH"
+		AttackSound = "Missile", 1, "vile/start"
+	}
+	Cast
+	{
+		CastClass = "Cyberdemon"
+		CastName = "$CC_CYBER"
+		AttackSound = "Missile", 1, "weapons/rocklf"
+		AttackSound = "Missile", 3, "weapons/rocklf"
+		AttackSound = "Missile", 5, "weapons/rocklf"
+	}
+	Cast
+	{
+		CastClass = "DoomPlayer"
+		CastName = "$CC_HERO"
+		AttackSound = "Missile", 0, "weapons/sshotf"
+	}
+	GotoTitle {}
+}
+
+
+// ----------------------------
+
+clearepisodes
+
+episode MAP01
+{
+	name = "Fortress"
+}
+
+// ----------------------------
+
+map titlemap "titlemap"
+{
+	music = "title"	
+}
+
+
+map MAP01 "Fortress of the Infernal Sanctum"
+{
+	cluster = 1
+	levelnum = 1
+	music = "seg-1"
+	sky2 = "GSKY01b"	
+}
+
+// ----------------------------
+
