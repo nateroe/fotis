@@ -44,8 +44,6 @@ Editor(s) used           UDB
 Known Bugs               No known issues
 May Not Run With         No known issues with mods. Requires GZDoom.
 
-
-
 * Copyright / Permissions *
 
 Fortress of the Infernal Sanctum © 2025 by Nathaniel Roe (GOATPRST) is licensed under
@@ -74,11 +72,9 @@ engrave it in marble, carve into wooden strips, inscribe on papyrus, or
 imprint into clay tablets. Probably you'll use the Internet though. That's
 cool, too.
 
-
-
 * Where to get this WAD *
 
 Websites
 
-https://github.com/nateroe/fotis
+https://github.com/goatprst/fotis
 ===========================================================================

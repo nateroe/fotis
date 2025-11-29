@@ -2,9 +2,11 @@
 
 ![Fortress of the Infernal Sanctum](patches/m_doom.png)
 
-A single large map for GZDoom featuring defensive fortress architecture, ~1052 enemies, an adaptive music system with 18 segments, and a cinematic title screen with a scale maquette diorama.
+A galaxy hangs over the battlements. Breach the fortress. Survive the shifting cells. Cross the drawbridge. Fight your way to the Infernal Sanctum - and the horde that guards it.
 
-If you find it difficult, skill levels are implemented - try HNTR. Or if you just want to blaze through it.
+A single large map for GZDoom with 1000+ enemies on UV (500 on HNTR, full skill level support). Original electronic score with adaptive music that builds as you progress. 
+
+The title screen presents the fortress as a scale model:
 
 ![Diorama Shot 1](screenshots/diorama_1.png)
 
@@ -25,7 +27,6 @@ There are three different variants available:
 * fotis.pk3 -- this is the best, contains audio as 24-bit FLAC (RECOMMENDED)
 * fotis-ogg.pk3 -- this version contains audio compressed with Ogg Vorbis (if somehow a few megabytes matters to you in this current year)
 * fotis-nomusic.pk3 -- this version contains no audio files at all (if you must have the smallest possible download)
-
 
 ### Copyright / Permissions
 
